@@ -1,23 +1,19 @@
 import React from 'react';
-import {Alert} from 'react-native';
 import {
   Container,
   Header,
   HeaderImage,
   ImageHeader,
   Content,
-  HeroContainer,
-  Item,
-  HeroImage,
-  Title,
-  HeroName,
+  ButtonsContainer,
+  StyledButton,
+  StyledIcon,
+  ButtonText,
 } from './styles';
 
+import TopHeroes from '~/components/TopHeroes';
 import logo from '~/assets/Logo.png';
 import bg from '~/assets/bg.png';
-import ironman from '~/assets/icons/ironman.png';
-import hulk from '~/assets/icons/hulk.png';
-import spiderman from '~/assets/icons/spiderman.png';
 
 export default function Main({navigation}) {
   return (
@@ -29,28 +25,27 @@ export default function Main({navigation}) {
       </Header>
 
       <Content>
-        <Title>Top heroes</Title>
-        <HeroContainer>
-          <Item
-            onPress={() =>
-              navigation.navigate('HeroDetails', {name: 'Iron Man'})
-            }>
-            <HeroImage source={ironman} />
-            <HeroName>Iron Man</HeroName>
-          </Item>
-          <Item
-            onPress={() => navigation.navigate('HeroDetails', {name: 'Hulk'})}>
-            <HeroImage source={hulk} />
-            <HeroName>Hulk</HeroName>
-          </Item>
-          <Item
-            onPress={() =>
-              navigation.navigate('HeroDetails', {name: 'Spider-Man'})
-            }>
-            <HeroImage source={spiderman} />
-            <HeroName>Spider Man</HeroName>
-          </Item>
-        </HeroContainer>
+        <TopHeroes navigation={navigation} />
+        <ButtonsContainer>
+          <StyledButton>
+            <StyledIcon name="search" />
+            <ButtonText>Pesquisar</ButtonText>
+          </StyledButton>
+          <StyledButton>
+            <StyledIcon name="book" />
+            <ButtonText>Comics</ButtonText>
+          </StyledButton>
+        </ButtonsContainer>
+        <ButtonsContainer>
+          <StyledButton>
+            <StyledIcon name="search" />
+            <ButtonText>Series</ButtonText>
+          </StyledButton>
+          <StyledButton>
+            <StyledIcon name="book" />
+            <ButtonText>Events</ButtonText>
+          </StyledButton>
+        </ButtonsContainer>
       </Content>
     </Container>
   );

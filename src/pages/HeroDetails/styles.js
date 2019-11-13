@@ -1,20 +1,30 @@
 import styled from 'styled-components/native';
+import {Dimensions} from 'react-native';
+import Lottie from 'lottie-react-native';
 
 export const Container = styled.View`
   flex: 1;
-  background: #504a4a;
+  background: #e23636;
 `;
 
 export const Header = styled.View`
-  display: flex;
-  /* background-color: rgba(0, 0, 0, 0.76); */
-  background-color: rgba(255, 0, 0, 0.85);
+  height: ${Dimensions.get('window').height * 0.25};
+  border-bottom-width: 3px;
+  border-color: #fff;
+`;
+
+export const HeaderTitle = styled.Text`
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+`;
+
+export const HeaderImage = styled.ImageBackground`
+  flex: 1;
+  padding: 20px 0 0 20px;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 10;
-  padding-right: 10;
-  height: 50;
+  align-items: flex-start;
 `;
 
 export const HeroContainer = styled.View`
@@ -22,9 +32,10 @@ export const HeroContainer = styled.View`
   align-items: center;
   justify-content: center;
   margin: 20px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 1);
   padding: 20px;
+  top: -100px;
 `;
 
 export const HeroImage = styled.Image`
@@ -36,12 +47,21 @@ export const HeroImage = styled.Image`
 export const Name = styled.Text`
   font-size: 22px;
   font-weight: bold;
+  margin: 5px 0;
   color: #333;
 `;
 
 export const Description = styled.Text`
-  margin-top: 20px;
+  margin-top: 18px;
+  line-height: 25;
   font-size: 16px;
   text-align: justify;
   color: #333;
+`;
+
+export const Animation = styled(Lottie)`
+  height: 120px;
+  width: 120px;
+  align-self: center;
+  margin-top: 20px;
 `;

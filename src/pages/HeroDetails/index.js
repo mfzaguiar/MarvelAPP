@@ -1,18 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import Lottie from 'lottie-react-native';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {
   Container,
   Header,
+  HeaderTitle,
+  HeaderImage,
   HeroContainer,
   HeroImage,
   Name,
   Description,
+  Animation,
 } from './styles';
 
 import api from '~/services/api';
+import bg from '~/assets/bg.png';
 import LoadingAnimation from '~/assets/animations/loader.json';
 
 export default function HeroDetails({navigation}) {
@@ -24,9 +28,6 @@ export default function HeroDetails({navigation}) {
     async function loadHero() {
       const response = await api.get('characters', {
         params: {
-          apikey: '',
-          hash: '',
-          ts: 1573593206609,
           name: heroName,
         },
       });
@@ -39,12 +40,15 @@ export default function HeroDetails({navigation}) {
   return (
     <Container>
       <Header>
-        <TouchableOpacity onPress={() => navigation.navigate('Main')}>
-          <Icon name="arrow-back" size={28} style={{margin: 10}} color="#fff" />
-        </TouchableOpacity>
+        <HeaderImage source={bg}>
+          <TouchableOpacity onPress={() => navigation.navigate('Main')}>
+            <Icon name="arrow-back" size={35} color="#fff" />
+          </TouchableOpacity>
+          <HeaderTitle>Detalhes</HeaderTitle>
+        </HeaderImage>
       </Header>
       {loading ? (
-        <Lottie source={LoadingAnimation} autoPlay loop />
+        <Animation source={LoadingAnimation} autoPlay loop />
       ) : (
         <HeroContainer>
           <HeroImage

@@ -1,12 +1,13 @@
 import styled from 'styled-components/native';
+import {Dimensions} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export const Container = styled.View`
   flex: 1;
 `;
 
 export const Header = styled.View`
-  /* background: rgba(255, 0, 0, 0.85); */
-  background: #504a4a;
+  background: #e23636;
 `;
 
 export const HeaderImage = styled.ImageBackground.attrs({
@@ -29,40 +30,31 @@ export const ImageHeader = styled.Image`
 
 export const Content = styled.View`
   flex: 1;
-  /* background: rgba(255, 0, 0, 0.85); */
-  background: #504a4a;
+  background: #e23636;
 `;
 
-export const HeroContainer = styled.View`
-  padding: 15px 10px;
+export const ButtonsContainer = styled.View`
+  padding: 10px;
   flex-direction: row;
-  align-self: center;
 `;
 
-export const Item = styled.TouchableOpacity`
-  height: 120px;
-  width: 120px;
+export const StyledButton = styled.TouchableOpacity`
+  height: ${Dimensions.get('window').height * 0.1};
+  width: ${Dimensions.get('window').width * 0.45};
+  background: #fff;
+  border-radius: 10px;
   align-items: center;
   justify-content: center;
-  background: white;
-  border-radius: 10px;
-  margin: 0 3px;
+  margin: 0 5px;
 `;
 
-export const HeroImage = styled.Image`
-  height: 60px;
-  width: 60px;
-`;
+export const StyledIcon = styled(Icon).attrs({
+  size: 32,
+  color: '#333',
+})``;
 
-export const HeroName = styled.Text`
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-`;
-
-export const Title = styled.Text`
+export const ButtonText = styled.Text`
   font-size: 20px;
+  color: #333;
   font-weight: bold;
-  color: #fff;
-  margin: 10px 0 0 15px;
 `;

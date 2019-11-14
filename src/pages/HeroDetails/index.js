@@ -23,28 +23,30 @@ export default function HeroDetails({navigation}) {
   const [loading, setLoading] = useState(true);
   const [hero, setHero] = useState();
   const heroName = navigation.getParam('name');
+  const heroId = navigation.getParam('id');
 
   useEffect(() => {
     async function loadHero() {
       const response = await api.get('characters', {
         params: {
           name: heroName,
+          id: heroId,
         },
       });
       setHero(response.data.data.results[0]);
       setLoading(false);
     }
     loadHero();
-  }, [heroName]);
+  }, [heroName, heroId]);
 
   return (
     <Container>
       <Header>
         <HeaderImage source={bg}>
-          <TouchableOpacity onPress={() => navigation.navigate('Main')}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Icon name="arrow-back" size={35} color="#fff" />
           </TouchableOpacity>
-          <HeaderTitle>Detalhes</HeaderTitle>
+          <HeaderTitle>Hero Details</HeaderTitle>
         </HeaderImage>
       </Header>
       {loading ? (
@@ -61,3 +63,7 @@ export default function HeroDetails({navigation}) {
     </Container>
   );
 }
+
+HeroDetails.navigationOptions = () => ({
+  header: null,
+});

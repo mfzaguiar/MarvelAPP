@@ -17,7 +17,7 @@ import thanos from '~/assets/icons/thanos.png';
 export default function TopHeroes({navigation}) {
   return (
     <HeroContainer>
-      <Title>Top 5 heroes</Title>
+      <Title>Top heroes</Title>
       <TabContainer>
         <Item
           onPress={() =>
@@ -43,7 +43,7 @@ export default function TopHeroes({navigation}) {
             navigation.navigate('HeroDetails', {name: 'Captain America'})
           }>
           <HeroImage source={captain} />
-          <HeroName>Capitão América</HeroName>
+          <HeroName>Capitão America</HeroName>
         </Item>
         <Item
           onPress={() => navigation.navigate('HeroDetails', {name: 'Thanos'})}>

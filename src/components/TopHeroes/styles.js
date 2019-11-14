@@ -13,7 +13,7 @@ export const Item = styled.TouchableOpacity`
   width: 120px;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   margin: 0 3px;
 `;
@@ -24,20 +24,24 @@ export const HeroImage = styled.Image`
 `;
 
 export const HeroName = styled.Text`
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Marvel-Regular';
+  letter-spacing: 1px;
+  margin-top: 3px;
 `;
 
 export const Title = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
   color: #fff;
-  margin: 0 0 10px 15px;
+  margin: 5px 0 10px 20px;
+  font-family: 'Marvel-Regular';
+  text-transform: uppercase;
 `;
 
 export const TabContainer = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
-  contentContainerStyle: {paddingLeft: 10, paddingRight: 20},
+  contentContainerStyle: {paddingLeft: 15, paddingRight: 20},
 })``;

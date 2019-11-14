@@ -15,9 +15,10 @@ export const Header = styled.View`
 
 export const HeaderTitle = styled.Text`
   color: #fff;
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 20px;
+  font-size: 35px;
+  margin: 5px 0 0 20px;
+  text-transform: uppercase;
+  font-family: 'Marvel-Regular';
 `;
 
 export const HeaderImage = styled.ImageBackground`
@@ -45,10 +46,11 @@ export const HeroImage = styled.Image`
 `;
 
 export const Name = styled.Text`
-  font-size: 22px;
-  font-weight: bold;
-  margin: 5px 0;
-  color: #333;
+  font-size: 28px;
+  margin: 15px 0 0px 0;
+  color: #504a4a;
+  font-family: 'Marvel-Regular';
+  text-transform: uppercase;
 `;
 
 export const Description = styled.Text`
@@ -56,7 +58,7 @@ export const Description = styled.Text`
   line-height: 25;
   font-size: 16px;
   text-align: justify;
-  color: #333;
+  color: #504a4a;
 `;
 
 export const Animation = styled(Lottie)`

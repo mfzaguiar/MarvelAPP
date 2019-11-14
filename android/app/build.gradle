@@ -186,6 +186,15 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':lottie-react-native')
 
+
+    // For animated GIF support
+    compile 'com.facebook.fresco:fresco:1.+'
+    compile 'com.facebook.fresco:animated-gif:1.+'
+
+    // For WebP support, including animated WebP
+    compile 'com.facebook.fresco:animated-webp:1.+'
+    compile 'com.facebook.fresco:webpsupport:1.+'
+
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")

@@ -27,26 +27,16 @@ export default function Main({navigation}) {
       <Content>
         <TopHeroes navigation={navigation} />
         <ButtonsContainer>
-          <StyledButton>
+          <StyledButton onPress={() => navigation.navigate('HeroSearch')}>
+            <ButtonText>Search</ButtonText>
             <StyledIcon name="search" />
-            <ButtonText>Pesquisar</ButtonText>
-          </StyledButton>
-          <StyledButton>
-            <StyledIcon name="book" />
-            <ButtonText>Comics</ButtonText>
-          </StyledButton>
-        </ButtonsContainer>
-        <ButtonsContainer>
-          <StyledButton>
-            <StyledIcon name="search" />
-            <ButtonText>Series</ButtonText>
-          </StyledButton>
-          <StyledButton>
-            <StyledIcon name="book" />
-            <ButtonText>Events</ButtonText>
           </StyledButton>
         </ButtonsContainer>
       </Content>
     </Container>
   );
 }
+
+Main.navigationOptions = () => ({
+  header: null,
+});

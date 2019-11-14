@@ -14,7 +14,7 @@ export const HeaderImage = styled.ImageBackground.attrs({
   imageStyle: {
     borderBottomLeftRadius: 35,
     borderBottomRightRadius: 35,
-    borderColor: '#fff',
+    borderColor: 'rgba(0,0,0,0.8)',
     borderWidth: 1,
   },
 })`
@@ -34,27 +34,30 @@ export const Content = styled.View`
 `;
 
 export const ButtonsContainer = styled.View`
-  padding: 10px;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledButton = styled.TouchableOpacity`
-  height: ${Dimensions.get('window').height * 0.1};
-  width: ${Dimensions.get('window').width * 0.45};
-  background: #fff;
+  height: ${Dimensions.get('window').height * 0.15};
+  width: 90%;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
 `;
 
 export const StyledIcon = styled(Icon).attrs({
-  size: 32,
-  color: '#333',
+  size: 40,
+  color: '#fff',
 })``;
 
 export const ButtonText = styled.Text`
-  font-size: 20px;
-  color: #333;
-  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Marvel-Regular';
+  text-transform: uppercase;
+  margin-right: 20px;
 `;

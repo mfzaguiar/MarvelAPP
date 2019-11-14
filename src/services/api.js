@@ -9,7 +9,7 @@ api.interceptors.request.use(config => {
     ...config.params,
     apikey: '',
     hash: '',
-    ts: '',
+    ts: '1573593206609',
   };
   return config;
 });

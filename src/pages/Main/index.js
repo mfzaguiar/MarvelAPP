@@ -7,13 +7,15 @@ import {
   Content,
   ButtonsContainer,
   StyledButton,
-  StyledIcon,
   ButtonText,
+  ButtonImage,
 } from './styles';
 
 import TopHeroes from '~/components/TopHeroes';
 import logo from '~/assets/Logo.png';
 import bg from '~/assets/bg.png';
+import comic from '~/assets/icons/comic-book.png';
+import avengers from '~/assets/icons/avengers.png';
 
 export default function Main({navigation}) {
   return (
@@ -28,8 +30,12 @@ export default function Main({navigation}) {
         <TopHeroes navigation={navigation} />
         <ButtonsContainer>
           <StyledButton onPress={() => navigation.navigate('HeroSearch')}>
-            <ButtonText>Search</ButtonText>
-            <StyledIcon name="search" />
+            <ButtonText>Hero Search</ButtonText>
+            <ButtonImage source={avengers} />
+          </StyledButton>
+          <StyledButton onPress={() => navigation.navigate('HeroSearch')}>
+            <ButtonText>Comics Search </ButtonText>
+            <ButtonImage source={comic} />
           </StyledButton>
         </ButtonsContainer>
       </Content>

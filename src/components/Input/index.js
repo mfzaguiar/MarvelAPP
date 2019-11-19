@@ -12,20 +12,16 @@ function Input({style, value, icon, ...rest}, ref) {
     setText(value);
   }, [value]);
 
-  function handleChange(value) {
-    setText(value);
-  }
-
   return (
     <Container style={style}>
       <TInput
         value={text}
-        onChangeText={() => handleChange(value)}
+        onChangeText={() => setText(value)}
         {...rest}
         ref={ref}
       />
       {icon === 'clear' ? (
-        <RectButton onPress={() => handleChange('')}>
+        <RectButton onPress={() => setText('')}>
           <Icon name="clear" size={20} color="rgba(255,255,255,0.6)" />
         </RectButton>
       ) : (

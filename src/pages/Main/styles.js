@@ -34,7 +34,6 @@ export const Content = styled.View`
 `;
 
 export const ButtonsContainer = styled.View`
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 `;
@@ -47,6 +46,7 @@ export const StyledButton = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 `;
 
 export const StyledIcon = styled(Icon).attrs({
@@ -60,4 +60,10 @@ export const ButtonText = styled.Text`
   font-family: 'Marvel-Regular';
   text-transform: uppercase;
   margin-right: 20px;
+  letter-spacing: 1;
+`;
+
+export const ButtonImage = styled.Image`
+  height: 64px;
+  width: 64px;
 `;

@@ -87,7 +87,7 @@ export default function HeroSearch({navigation}) {
           <TouchableOpacity onPress={() => navigation.navigate('Main')}>
             <Icon name="arrow-back" size={32} color="#fff" />
           </TouchableOpacity>
-          <HeaderTitle>Search Hero</HeaderTitle>
+          <HeaderTitle>Hero Search</HeaderTitle>
         </HeaderImage>
       </Header>
       <Form>

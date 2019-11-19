@@ -3,7 +3,7 @@ import Lottie from 'lottie-react-native';
 import {Dimensions} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
 
-export const Container = styled.View`
+export const Container = styled.KeyboardAvoidingView`
   flex: 1;
   background: #e23636;
 `;
@@ -53,6 +53,7 @@ export const Animation = styled(Lottie)`
 
 export const HeroButton = styled.TouchableOpacity`
   flex: 1;
+  height: 250px;
 `;
 
 export const HeroHeader = styled.View`

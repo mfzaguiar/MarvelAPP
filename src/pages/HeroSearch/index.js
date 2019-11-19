@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {FlatList, Keyboard} from 'react-native';
+import React, {useState} from 'react';
+import {FlatList, Keyboard, ActivityIndicator} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -28,10 +28,18 @@ import {
 
 export default function HeroSearch({navigation}) {
   const [loading, setLoading] = useState(false);
+  const [loadingList, setLoadingList] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const [search, setSearch] = useState('');
   const [heroes, setHeroes] = useState([]);
 
   const [offset, setOffSet] = useState(0);
+  const [count, setCount] = useState(0);
+
+  const loadingFooter = () => {
+    if (!loadingList) return null;
+    return <ActivityIndicator size="large" color="#fff" />;
+  };
 
   async function loadHeros() {
     if (search.length >= 1) {
@@ -40,16 +48,37 @@ export default function HeroSearch({navigation}) {
         params: {
           nameStartsWith: search,
           limit: 10,
-          offset,
         },
       });
+      setOffSet(0);
       setHeroes(response.data.data.results);
+      setCount(response.data.data.count);
       setLoading(false);
       Keyboard.dismiss();
     }
   }
 
-  function handleLoadMore() {}
+  const loadM = () => {
+    if (scroll && count >= 10) {
+      setOffSet(offset + 10);
+      handleLoadMore(offset + 10);
+    }
+  };
+
+  async function handleLoadMore(offset = 10) {
+    setLoadingList(true);
+    const response = await api.get('characters', {
+      params: {
+        nameStartsWith: search,
+        limit: 10,
+        offset,
+      },
+    });
+    setHeroes([...heroes, ...response.data.data.results]);
+    setCount(response.data.data.count);
+    setLoadingList(false);
+    setScroll(false);
+  }
 
   return (
     <Container>
@@ -87,6 +116,13 @@ export default function HeroSearch({navigation}) {
             </GifContainer>
           ) : (
             <FlatList
+              onScroll={() => setScroll(true)}
+              onRefresh={() => loadHeros()}
+              refreshing={loading}
+              onEndReached={() => loadM()}
+              onEndReachedThreshold={0.1}
+              ListFooterComponent={loadingFooter}
+              scrollEventThrottle={50}
               numColumns={2}
               data={heroes}
               keyExtractor={hero => hero.id}

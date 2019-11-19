@@ -4,8 +4,9 @@
 Usando Marvel API
 </p>
 
-## Versão Beta da beta :smiley:
+## Em desenvolvimento :smiley:
 
-### Em desenvolvimento
-
-<img src=".github/devstage.png" width="200"  alt="devStage">
+<img src=".github/homeScreen.png" width="200"  alt="devStage">
+<img src=".github/heroDetails.png" width="200"  alt="devStage">
+<img src=".github/searchHero.png" width="200"  alt="devStage">
+<img src=".github/listHero.png" width="200"  alt="devStage">

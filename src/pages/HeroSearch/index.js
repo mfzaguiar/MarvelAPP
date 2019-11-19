@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Input from '~/components/Input';
 import api from '~/services/api';
 import bg from '~/assets/bg.png';
-import empty from '~/assets/animations/empty.gif';
+import empty from '~/assets/animations/groot.gif';
 import LoadingAnimation from '~/assets/animations/loader.json';
 
 import {
@@ -23,6 +23,7 @@ import {
   HeroName,
   HeroImage,
   GifContainer,
+  GifText,
   ImageGif,
 } from './styles';
 
@@ -112,6 +113,7 @@ export default function HeroSearch({navigation}) {
         <>
           {heroes.length <= 0 ? (
             <GifContainer>
+              <GifText>No Data ...</GifText>
               <ImageGif source={empty} />
             </GifContainer>
           ) : (

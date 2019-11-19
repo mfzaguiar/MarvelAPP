@@ -88,8 +88,17 @@ export const GifContainer = styled.View`
 `;
 
 export const ImageGif = styled.Image.attrs({
-  resizeMode: 'cover',
+  resizeMode: 'contain',
 })`
-  height: 30%;
+  height: 50%;
   width: 100%;
+`;
+
+export const GifText = styled.Text`
+  font-size: 32px;
+  color: #fff;
+  font-family: 'Marvel-Regular';
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
 `;

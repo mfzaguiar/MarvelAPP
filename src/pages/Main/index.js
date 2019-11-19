@@ -33,7 +33,7 @@ export default function Main({navigation}) {
             <ButtonText>Hero Search</ButtonText>
             <ButtonImage source={avengers} />
           </StyledButton>
-          <StyledButton onPress={() => navigation.navigate('HeroSearch')}>
+          <StyledButton onPress={() => navigation.navigate('ComicSearch')}>
             <ButtonText>Comics Search </ButtonText>
             <ButtonImage source={comic} />
           </StyledButton>

@@ -125,9 +125,12 @@ export default function ComicSearch({navigation}) {
               scrollEventThrottle={50}
               numColumns={2}
               data={comics}
-              keyExtractor={hero => hero.id}
+              keyExtractor={item => item.id}
               renderItem={({item}) => (
-                <ComicButton onPress={() => {}}>
+                <ComicButton
+                  onPress={() =>
+                    navigation.navigate('ComicDetails', {id: item.id})
+                  }>
                   <ComicImage
                     source={{
                       uri: `${item.thumbnail.path}.${item.thumbnail.extension}`,

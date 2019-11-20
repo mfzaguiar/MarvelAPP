@@ -43,7 +43,7 @@ export default function TopHeroes({navigation}) {
             navigation.navigate('HeroDetails', {name: 'Captain America'})
           }>
           <HeroImage source={captain} />
-          <HeroName>Capitão America</HeroName>
+          <HeroName>Captain America</HeroName>
         </Item>
         <Item
           onPress={() => navigation.navigate('HeroDetails', {name: 'Thanos'})}>

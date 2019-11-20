@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 import {Dimensions} from 'react-native';
 import Lottie from 'lottie-react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   flex: 1;
@@ -28,21 +29,20 @@ export const HeaderImage = styled.ImageBackground`
   align-items: flex-start;
 `;
 
-export const HeroContainer = styled.View`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
+export const HeroContainer = styled.ScrollView`
   margin: 20px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 1);
-  padding: 20px;
   top: -100px;
+  padding: 20px;
+  min-height: 80%;
 `;
 
 export const HeroImage = styled.Image`
   height: 150px;
   width: 150px;
   border-radius: 10px;
+  align-self: center;
 `;
 
 export const Name = styled.Text`
@@ -51,6 +51,7 @@ export const Name = styled.Text`
   color: #504a4a;
   font-family: 'Marvel-Regular';
   text-transform: uppercase;
+  text-align: center;
 `;
 
 export const Description = styled.Text`
@@ -66,4 +67,27 @@ export const Animation = styled(Lottie)`
   width: 120px;
   align-self: center;
   margin-top: 20px;
+`;
+
+export const FooterLink = styled.View`
+  flex-direction: row;
+  margin: 20px 0 20px 0;
+`;
+
+export const Link = styled.TouchableOpacity`
+  height: 55px;
+  background: #e23636;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 10px;
+`;
+
+export const LinkText = styled.Text`
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 0.2;
+  font-family: 'Marvel-Regular';
+  text-transform: uppercase;
 `;

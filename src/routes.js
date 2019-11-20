@@ -6,6 +6,7 @@ import HeroDetails from '~/pages/HeroDetails';
 import HeroSearch from '~/pages/HeroSearch';
 import ComicSearch from '~/pages/ComicSearch';
 import ComicDetails from '~/pages/ComicDetails';
+import WebView from '~/pages/WebView';
 
 const Routes = createAppContainer(
   createStackNavigator({
@@ -14,6 +15,7 @@ const Routes = createAppContainer(
     HeroSearch,
     ComicSearch,
     ComicDetails,
+    WebView,
   }),
 );
 

@@ -13,11 +13,15 @@ import {
   Name,
   Description,
   Animation,
+  FooterLink,
+  Link,
+  LinkText,
 } from './styles';
 
 import api from '~/services/api';
 import bg from '~/assets/bg.png';
 import LoadingAnimation from '~/assets/animations/loader.json';
+import HeroSearch from '../HeroSearch';
 
 export default function HeroDetails({navigation}) {
   const [loading, setLoading] = useState(true);
@@ -58,6 +62,19 @@ export default function HeroDetails({navigation}) {
           />
           <Name>{hero.name}</Name>
           <Description>{hero.description}</Description>
+          <FooterLink>
+            {hero.urls.map(item => (
+              <Link
+                onPress={() =>
+                  navigation.navigate('WebView', {
+                    name: hero.name,
+                    url: item.url,
+                  })
+                }>
+                <LinkText>{item.type}</LinkText>
+              </Link>
+            ))}
+          </FooterLink>
         </HeroContainer>
       )}
     </Container>

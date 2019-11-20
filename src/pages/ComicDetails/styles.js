@@ -36,7 +36,7 @@ export const ComicContainer = styled.ScrollView.attrs({
   background: rgba(255, 255, 255, 1);
   top: -100px;
   padding: 10px;
-  flex: 1;
+  min-height: 80%;
 `;
 
 export const SideContent = styled.View`
@@ -52,11 +52,8 @@ export const ComicImage = styled.Image.attrs({
 
 export const Title = styled.Text`
   font-size: 20px;
-  letter-spacing: 0.2;
   padding: 5px;
   color: #504a4a;
-  font-family: 'Marvel-Regular';
-  text-transform: uppercase;
   text-align: center;
 `;
 
@@ -76,7 +73,7 @@ export const ComicTopic = styled.Text`
 `;
 
 export const ComicTopicDescription = styled.Text`
-  margin: 10px 0 0 15px;
+  margin: 10px 0 0 10px;
   font-size: 18px;
   font-weight: bold;
   color: #504a4a;

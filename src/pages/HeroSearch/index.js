@@ -5,6 +5,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Input from '~/components/Input';
+import HeroImage from '~/components/CImage';
 import api from '~/services/api';
 import bg from '~/assets/bg.png';
 import empty from '~/assets/animations/groot.gif';
@@ -21,7 +22,6 @@ import {
   HeroButton,
   HeroHeader,
   HeroName,
-  HeroImage,
   GifContainer,
   GifText,
   ImageGif,

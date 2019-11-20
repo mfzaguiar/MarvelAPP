@@ -94,11 +94,3 @@ export const ComicTitle = styled.Text.attrs({
   text-transform: uppercase;
   text-align: center;
 `;
-
-export const ComicImage = styled.ImageBackground.attrs({
-  resizeMode: 'cover',
-})`
-  flex: 1;
-  height: ${Dimensions.get('window').height * 0.25};
-  margin: 5px;
-`;

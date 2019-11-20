@@ -15,13 +15,13 @@ import {
   GifText,
   ImageGif,
   ComicButton,
-  ComicImage,
   ComicHeader,
   ComicTitle,
 } from './styles';
 
 import api from '~/services/api';
 import Input from '~/components/Input';
+import ComicImage from '~/components/CImage';
 import bg from '~/assets/bg.png';
 import LoadingAnimation from '~/assets/animations/loader.json';
 import empty from '~/assets/animations/groot.gif';

@@ -28,6 +28,7 @@ This is a personal project built for learning purposes. It uses the official Mar
 ## :framed_picture: Application Screens
 
 <h1 align="center">
+<img src=".github/showApp.gif" width="200"  alt="App gif">
 <img src=".github/home.png" width="200"  alt="Home Screen">
 <img src=".github/heroDetails.png" width="200"  alt="Hero Details">
 <img src=".github/heroSearch.png" width="200"  alt="Hero Search">

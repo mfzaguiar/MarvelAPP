@@ -8,6 +8,8 @@ export default function WebView({navigation}) {
   return <Browser source={{uri: url}} />;
 }
 
-WebView.nevigationOptions = ({navigation}) => ({
-  title: navigation.getParam('name'),
-});
+WebView.navigationOptions = ({navigation}) => {
+  return {
+    title: navigation.getParam('name'),
+  };
+};

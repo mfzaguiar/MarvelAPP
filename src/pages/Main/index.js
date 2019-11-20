@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Container,
   Header,
+  HeaderTitle,
   HeaderImage,
   ImageHeader,
   Content,
@@ -24,6 +25,7 @@ export default function Main({navigation}) {
         <HeaderImage source={bg}>
           <ImageHeader source={logo} />
         </HeaderImage>
+        <HeaderTitle>Heroes</HeaderTitle>
       </Header>
 
       <Content>

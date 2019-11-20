@@ -10,6 +10,17 @@ export const Header = styled.View`
   background: #e23636;
 `;
 
+export const HeaderTitle = styled.Text`
+  font-size: 40px;
+  color: #fff;
+  left: 200px;
+  top: 160px;
+  text-align: center;
+  font-family: 'fofbb_reg';
+  text-transform: uppercase;
+  position: absolute;
+`;
+
 export const HeaderImage = styled.ImageBackground.attrs({
   imageStyle: {
     borderBottomLeftRadius: 35,

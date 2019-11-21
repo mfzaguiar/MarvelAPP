@@ -15,7 +15,12 @@
 
 This is a personal project built for learning purposes. It uses the official Marvel API
 
-# functionalities
+## Functionalities
+
+- List of 5 heroes
+- Hero Search
+- Comics Search
+- Acess comics external links using webview
 
 ## Built with
 
@@ -36,6 +41,42 @@ This is a personal project built for learning purposes. It uses the official Mar
 <img src=".github/comicDetails.png" width="200"  alt="comicDetails">
 <img src=".github/webView.png" width="200"  alt="Web View">
 </h1>
+
+## How to install
+
+<strong>1.</strong> Get your developer [**api key**](https://developer.marvel.com/)
+
+<strong>2.</strong> Clone project and install dependencies
+
+```
+$ git clone https://github.com/mfzaguiar/MarvelAPP.git
+$ cd MarvelAPP
+$ yarn
+```
+
+<strong>3.</strong> Rename the file .env.example to .env and put your public key and hash
+
+obs: [**md5 hash generator**](https://passwordsgenerator.net/md5-hash-generator/)
+
+```
+# PUBLIC API KEY
+API_KEY=
+
+# HASH - (timestamp + private key + public api key)
+HASH=
+
+# Timestamp - use the same hash timestamp
+TIMESTAMP=
+
+
+```
+
+<strong> 4. </strong> For Android run:
+
+```
+react-native run-android
+
+```
 
 # Author
 

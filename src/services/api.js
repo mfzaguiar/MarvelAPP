@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {API_KEY, HASH} from 'react-native-dotenv';
+import {API_KEY, HASH, TIMESTAMP} from 'react-native-dotenv';
 
 const api = axios.create({
   baseURL: 'https://gateway.marvel.com:443/v1/public/',
@@ -10,7 +10,7 @@ api.interceptors.request.use(config => {
     ...config.params,
     apikey: API_KEY,
     hash: HASH,
-    ts: '1573593206609',
+    ts: TIMESTAMP,
   };
   return config;
 });

@@ -60,13 +60,13 @@ export default function HeroSearch({navigation}) {
   }
 
   const loadM = () => {
-    if (scroll && count >= 10) {
+    if (scroll && count >= 10 && !loadingList) {
       setOffSet(offset + 10);
       handleLoadMore(offset + 10);
     }
   };
 
-  async function handleLoadMore(offset = 10) {
+  async function handleLoadMore(offset) {
     setLoadingList(true);
     const response = await api.get('characters', {
       params: {

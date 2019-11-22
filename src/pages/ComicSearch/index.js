@@ -58,7 +58,7 @@ export default function ComicSearch({navigation}) {
   }
 
   const loadM = () => {
-    if (scroll && count >= 10) {
+    if (scroll && count >= 10 && !loadingList) {
       setOffSet(offset + 10);
       handleLoadMore(offset + 10);
     }
